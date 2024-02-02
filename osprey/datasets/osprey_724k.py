@@ -254,8 +254,12 @@ class OspreyDetailedDescription(ConversationDataset):
                     qa_s.append({'from': 'human', 'value': self.begin_str+question})         
                 else:
                     qa_s.append({'from': 'human', 'value': question})     
-            
-                answer = re.findall(r"<.*>:\ (.*)", ann['description'][i])[0]
+
+                try:
+                    answer = re.findall(r"<.*>:\ (.*)", ann['description'][i])[0]
+                except IndexError:
+                    print("IndexError: list index out of range! continue")
+                    continue
            
                 qa_s.append({'from': 'gpt', 'value': answer})
 

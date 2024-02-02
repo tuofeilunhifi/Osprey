@@ -1,12 +1,12 @@
 #!/bin/bash
 export PYTHONPATH=`pwd`:$PYTHONPATH
 
-deepspeed --include localhost:0,1,2,3 osprey/train/train_mem.py \
+deepspeed --include localhost:4 osprey/train/train_mem.py \
     --deepspeed ./scripts/zero2.json \
-    --model_name_or_path /exp/stage2/checkpoint-final \
-    --dataset_config ./osprey/configs/stage3.json \
+    --model_name_or_path /mnt/pfs-guan-ssai/cv/cjy/models/models--sunshine-lwt--Osprey-7b-stage2/snapshots/d301f2e4575b5086253e1429f401cfaf3420e48c \
+    --dataset_config ./osprey/configs/stage3_test.json \
     --version v1 \
-    --vision_tower laion2b_s29b_b131k_ft_soup.bin \
+    --vision_tower /mnt/pfs-guan-ssai/cv/cjy/models/models--laion--CLIP-convnext_large_d_320.laion2B-s29B-b131K-ft-soup/snapshots/39918dfbdf69ccd2172e6510a430e92337ee23e1/open_clip_pytorch_model.bin \
     --mm_projector_type mlp2x_gelu \
     --mm_vision_select_layer -2 \
     --mm_use_im_start_end False \
@@ -33,5 +33,5 @@ deepspeed --include localhost:0,1,2,3 osprey/train/train_mem.py \
     --gradient_checkpointing True \
     --dataloader_num_workers 4 \
     --lazy_preprocess True \
-    --report_to "none" \
+    --report_to "tensorboard" \
     --group_by_modality_length False

@@ -1,31 +1,37 @@
 [
     {
         "type": "coco_data",
-        "ann_file": "./data/coco/annotations/instances_train2017.json",
-        "img_prefix": "./data/coco/imgs"
+        "ann_file": "/mnt/pfs-guan-ssai/cv/cjy/data/coco2017/annotations/instances_train2017.json",
+        "img_prefix": "/mnt/pfs-guan-ssai/cv/cjy/data/coco2017/train2017"
+    },
+
+    {
+        "type": "coco_data",
+        "ann_file": "/mnt/pfs-guan-ssai/cv/cjy/data/coco2017/annotations/instances_val2017.json",
+        "img_prefix": "/mnt/pfs-guan-ssai/cv/cjy/data/coco2017/val2017"
     },
 
     {
         "type": "RefCOCO",
-        "ann_file": "./data/refcocos/finetune_refcoco_train_with_mask.json",
-        "img_prefix": "./data/coco/imgs"
+        "ann_file": "/mnt/pfs-guan-ssai/cv/cjy/data/osprey_trainingdata/finetune_refcoco_train_with_mask.json",
+        "img_prefix": "/mnt/pfs-guan-ssai/cv/cjy/data/merge_coco2014_coco2017/images"
      },
 
     {
         "type": "RefCOCOP",
-        "ann_file": "./data/refcocos/finetune_refcoco+_train_with_mask.json",
-        "img_prefix": "./data/coco/imgs"
+        "ann_file": "/mnt/pfs-guan-ssai/cv/cjy/data/osprey_trainingdata/finetune_refcoco+_train_with_mask.json",
+        "img_prefix": "/mnt/pfs-guan-ssai/cv/cjy/data/merge_coco2014_coco2017/images"
      },
 
     {
         "type": "PascalPart",
-        "ann_file": "./data/part_data/pascal_part/train.json",
-        "img_prefix": "./data/part_data/pascal_part/VOCdevkit/VOC2010/JPEGImages"
+        "ann_file": "/mnt/pfs-guan-ssai/cv/cjy/data/osprey_trainingdata/pascalpart_train.json",
+        "img_prefix": "/mnt/pfs-guan-ssai/cv/cjy/data/OpenDataLab___VOC2010/raw/Images/VOCdevkit/VOC2010/JPEGImages"
      },
      
      {
         "type": "PartImagenet",
-        "ann_file": "./data/part_data/partImagenet/train_format.json",
-        "img_prefix": "./data/part_data/partImagenet/train/"
+        "ann_file": "/mnt/pfs-guan-ssai/cv/cjy/data/osprey_trainingdata/partImagenet_train_format.json",
+        "img_prefix": "/mnt/pfs-guan-ssai/cv/cjy/data/partImagenet/train/"
      }
 ]

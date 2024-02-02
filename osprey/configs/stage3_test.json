@@ -1,0 +1,7 @@
+[
+    {
+        "type": "OspreyShortForm",
+        "ann_file": "/mnt/pfs-guan-ssai/cv/cjy/data/osprey-724k/osprey_short_form.json",
+        "img_prefix": "/mnt/pfs-guan-ssai/cv/cjy/data/merge_coco2014_coco2017/images"
+    }
+]
